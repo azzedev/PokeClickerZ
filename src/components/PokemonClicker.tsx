@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 const PokemonClicker = () => {
 
-    const { bonbons, setBonbons } = useContext(BonbonContext)
+    const { bonbons, setBonbons, totalBps } = useContext(BonbonContext)
 
     const handleClick = () => {
         setBonbons(bonbons + 1)
@@ -14,7 +14,8 @@ const PokemonClicker = () => {
     
     return(
         <div>
-            <p>Bonbons : { bonbons }</p>
+            <p>Bonbons : { Math.floor(bonbons) }</p>
+            <p>total Bps : { totalBps }</p>
             <Image
                 src="/pokeball.png"
                 alt="Pokeball"
